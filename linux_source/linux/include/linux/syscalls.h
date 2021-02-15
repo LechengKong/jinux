@@ -1420,5 +1420,8 @@ long ksys_old_shmctl(int shmid, int cmd, struct shmid_ds __user *buf);
 long compat_ksys_semtimedop(int semid, struct sembuf __user *tsems,
 			    unsigned int nsops,
 			    const struct old_timespec32 __user *timeout);
+//CSE422 02/04/2021
+asmlinkage long sys_noargs(void);
+asmlinkage long sys_argint(int input);
 
 #endif
